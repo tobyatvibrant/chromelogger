@@ -5,6 +5,7 @@
     var defaults = {
         show_upgrade_messages: true,
         show_line_numbers: false,
+        identify_chromelogger: false,
         color1: "#888888",
         color2: "#0563ad"
     };

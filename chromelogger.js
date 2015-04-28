@@ -226,10 +226,12 @@
             }
         });
         chrome.webRequest.onBeforeSendHeaders.addListener(function(details){
-          if (tabsWithExtensionEnabled.indexOf(details.tabId) !== -1) {
-            _modHeaders(details.requestHeaders, 'x-chromelogger-enabled', 'true');
+          if (localStorage.identify_chromelogger === "true") {
+            if (tabsWithExtensionEnabled.indexOf(details.tabId) !== -1) {
+              _modHeaders(details.requestHeaders, 'x-chromelogger-enabled', 'true');
+            }
+            return {requestHeaders: details.requestHeaders};
           }
-          return {requestHeaders: details.requestHeaders};
         },{urls:  ["<all_urls>"]}, ["requestHeaders", "blocking"]);
     }
 
