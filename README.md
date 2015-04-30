@@ -28,7 +28,7 @@ This is a list of available server side libraries
 
 To install manually for development
 
-1. [Download](https://github.com/ccampbell/chromelogger/archive/master.zip) this repository
+1. [Download](https://github.com/tobyatvibrant/chromelogger/archive/master.zip) this repository
 2. Unzip the repository
 3. In Chrome go to Window => Extensions or [chrome://extensions/](chrome://extensions/)
 4. Click the ``Load unpacked extension...`` button
